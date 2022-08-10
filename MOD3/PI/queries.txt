@@ -1,0 +1,103 @@
+--Q1 - identificar a média de popularidade geral ou de gêneros músicais
+--a fim de realizar alguma campanha de marketing sobre determinada preferência musical
+
+--q1.1. Popularidade média das músicas entre os anos de 2018 e 2020
+--Em todos os países (só tem o Brasil na base)
+--Utilizando a view materializada com agregação
+SELECT song, country, year, media_pop
+FROM mview_popularidade_media_musica
+WHERE 1 = 1
+AND year = 2018;
+
+--q1.2. Popularidade média dos generos Rap e Pop no entre 2018 a 2020
+--Em todos os países (só tem o Brasil na base)
+--Utilizando a view materializada com agregação
+SELECT genre, avg(media_pop)
+FROM mview_popularidade_media_musica
+WHERE 1 = 1
+AND genre IN ('Pop', 'Rap')
+AND year BETWEEN 2018 AND 2020
+GROUP BY genre;
+
+--Q2 - verificar a popularidade de determinados artistas
+--a fim de estimular produções e fomentar recompensas, cash back...
+
+--q2.1. popularidade média das músicas de cada artistas em todos os países
+-- no ano de 2020
+--uso de view materializada
+SELECT artists, country, media_pop
+FROM mview_popularidade_media_artista
+WHERE 1 = 1
+AND year = 2020
+
+--q2.2. popularidade média dos artistas e a quantidade de suas músicas
+--no Brasil no ano de 2020
+--uso de view materializada
+SELECT mp.artists, avg(mp.popularity) media_pop, count(0) qtd_musicas
+FROM mview_popularidade mp
+WHERE 1 = 1
+AND mp.year = 2020
+AND mp.country = 'Brazil'
+GROUP BY mp.artists
+ORDER BY mp.artists
+
+--Q3 - verificar a quantidade de streams realizados de músicas
+--em dados países e por música/gênero
+
+--q3.1. músicas com streams mais realizados por país
+--no ano de 2019
+SELECT so.song, c.country, d.year, sum(s.streams) 
+FROM country c, spotify s, date d, songs so
+WHERE 1 = 1
+AND s.country = c.country
+AND s.track_id = so.track_id
+AND s.streams_date = d.date
+AND d.year = 2019
+GROUP BY so.song, c.country, d.year
+ORDER BY sum(s.streams) DESC;
+
+--q3.2. músicas do gênero Rock com streams mais realizados no brasil
+--no ano de 2018
+SELECT so.song, d.year, sum(s.streams) 
+FROM country c, spotify s, date d, songs so,
+	genre g
+WHERE 1 = 1
+AND s.country = c.country
+AND s.track_id = so.track_id
+AND s.streams_date = d.date
+AND s.track_id = g.track_id
+AND s.streams_year = 2018
+AND c.country = 'Brazil'
+AND g.genre = 'Rock'
+GROUP BY so.song, d.year
+ORDER BY sum(s.streams) DESC;
+
+--Q4 consultas mais amplas para obter streams realizados
+
+--q4.1. streams realizados em cada país entre 2018 e 2020
+--considerando música, genero, artistas, ano 
+SELECT so.song, g.genre, a.artists, d.year, c.country, sum(s.streams)
+FROM spotify s, songs so, genre g, artists a, date d, country c
+WHERE 1 = 1
+AND s.track_id = so.track_id
+AND s.track_id = g.track_id
+AND s.artists_id = a.artists_id
+AND s.streams_date = d.date
+AND s.country = c.country
+AND d.year BETWEEN 2018 AND 2020
+GROUP BY so.song, g.genre, a.artists, d.year, c.country
+ORDER BY so.song, d.year, c.country, g.genre, a.artists
+
+--q4.2. adequação da query anterior para obter os streams 
+--em outubro de 2018
+SELECT so.song, g.genre, a.artists, c.country, sum(s.streams)
+FROM spotify s, songs so, genre g, artists a, date d, country c
+WHERE 1 = 1
+AND s.track_id = so.track_id
+AND s.track_id = g.track_id
+AND s.artists_id = a.artists_id
+AND s.streams_date = d.date
+AND s.country = c.country
+AND d.year_month = 201810 --outubro
+GROUP BY so.song, g.genre, a.artists,  c.country
+ORDER BY so.song, c.country, g.genre, a.artists
