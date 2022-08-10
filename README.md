@@ -93,16 +93,81 @@
 
 ## Módulo 4
 ### Banco de Dados Espaciais
+- Definição de dados espaciais e sistemas de informação geográficas: abstrações, tipos de dados espaciais e o que eles representam no mundo real. 
+- Importância da manipulação e análise espacial na ciência de dados.
+- Instalação e configuração de extensão espacial para um Sistema Gerenciador de Banco de Dados (SGBD).
+- Projeto e implementação de um banco de dados espacial utilizando um SGBD espacial.
+- Representações de dados espaciais: formato textual, formato binário e tipos de arquivos.
+- Operações sobre dados espaciais: numéricas, geométricas de conjunto, relacionamentos topológicos, dependentes de tipo e operações diversas.
+- Consultas típicas em banco de dados espaciais.
+- Métodos de acesso espacial: conceitos, implementação e desempenho.
+- Aplicação de dados espaciais em ambientes para tomada de decisão: data warehouse espacial e consultas SOLAP.
+- Qualidade de dados espaciais: coleta de informações, conceitos iniciais de vagueza espacial e sua representação no mundo real.
+
 ### Introdução ao Reconhecimento de Padrões
+- Visão do reconhecimento de padrões e sua importância na ciência de dados.
+- Modelos e métodos para aprendizagem supervisionada: árvores de decisão, modelos lineares (regressão linear e logística), Knn e support vector machine (SVM).
+- Modelos e métodos para aprendizagem não supervisionada: K-means, DBScan, agrupamento hierárquico e PAM.
+- Implementação de soluções algorítmicas de reconhecimento de padrões utilizando Python e/ou R.
+- Visão geral de quais tipos de modelos e métodos de aprendizagem supervisionado e não supervisionado a serem aplicados para resolver problemas em ciência e dados.
+- Validação de modelo: holdout, cross-validation, problemas com overfitting e underfitting.
+- Matriz de confusão e medidas de desempenho: F-measure, acurácia, precisão e revocação, entre outras.
+
 ### Metodologia de Pesquisa Científica em Computação
+- Conceitos fundamentais sobre a importância da pesquisa científica e sua aplicabilidade na resolução de problemas.
+- Tipos de revisões bibliográficas.
+- Natureza da pesquisa: quantitativa e qualitativa.
+- Tipos de pesquisas experimentais: survey, estudo de caso, experimento. Processo de experimentação: definição, seleção amostral, o planejamento do experimento e execução.
+- Análise e interpretação dos resultados e empacotamento dos resultados.
+- Interpretação de problemas da academia e indústria para resolução utilizando ciência de dados.
+- O processo de seleção de temas para o trabalho de conclusão de curso - ciência de dados aplicado à: Inteligência de Negócio, Big Data e/ou dados não convencionais. O processo de seleção de orientador.
 
 ## Módulo 5
 ### Tópicos Especiais em Ciência de Dados
+- Importância de sistemas nebulosos, estudo de novas memórias e extensibilidade de banco de dados na ciência de dados.
+- Sistemas nebulosos: teoria de conjuntos fuzzy, operações sobre conjuntos fuzzy, lógica fuzzy, sistema de inferência fuzzy, métodos de fuzzificação e defuzzificação.
+- Conceitos fundamentais de algoritmos avançados para lógica fuzzy: classificação fuzzy, agrupamento fuzzy e a geração automática e adequação de regras. 
+- Aplicação da teoria de conjuntos e lógica fuzzy em dados não convencionais: o estudo de dados espaciais fuzzy e a inferência espacial fuzzy. 
+- Gerenciamento de dados em memórias emergentes (flash, ReRAM, STT-RAM, entre outras): características intrínsecas, aplicações, estudos experimentais e algoritmos e estruturas de dados.
+- Banco de dados extensíveis: especificação de novos tipos abstratos de dados.
+
 ### Escrita de Artigo Científico
+
 ### Métodos e Modelos Avançados em Ciência de Dados
+- Visão geral dos modelos e métodos avançados em ciência de dados.
+- Redes Neurais Artificiais.
+- Modelos de Aprendizagem Profunda: Deep Learning e Rede neural convolucional.
+- Técnicas baseadas em Comitês: bagging e boosting.
+- Florestas aleatórias (random forest).
+- Inteligência de Enxame: PSO, ACO.
+- Fluxo de uma solução de ciência de dados em problemas reais.
 
 ## Módulo 6
 ### Trabalho de Conclusão de Curso
+
 ### Resolução de Problemas com Ciência de Dados
+- Utilização de métodos e modelos avançados na resolução de problemas: computação evolucionária (algoritmos genéticos e programação genética) e métodos Ensemble.
+- Seleção e ajuste de modelos.
+- Regularização e parametrização de modelos.
+- Otimização de algoritmos para ciência de dados.
+- Aprendizagem baseada em problemas.
+- Resolução de problemas da indústria e academia.
+- Estudo de casos aplicados à ciência de dados.
+
 ### Processamento de Grandes Volumes de Dados
+- Principais elementos, ecossistema e a arquitetura de ambientes de computação paralela e distribuído.
+- Paradigma de programação MapReduce na resolução de problemas com computação paralela e distribuídos.
+- Sistemas paralelos e distribuídos: Apache Hadoop e Apache Spark.
+- Linguagens de programação e de consultas para ambientes Hadoop e Spark (pySpark).
+- Extensões do Apache Hadoop e Apache Spark.
+- Conceitos fundamentais sobre computação em nuvem: Software como Serviço (SaaS), Plataforma como um Serviço (PaaS) e Infraestrutura como Serviço (IaaS).
+- Ambientes de computação em nuvem: AWS, Azure, entre outros.
+
 ### Mineração de Dados para Inteligência de Negócio
+- Conceitos de mineração de dados e seus diferentes pontos de vista: o ponto de vista de banco de dados, ponto de vista da inteligência artificial e o ponto de vista da estatística.
+- Importância de um ambiente de data warehousing na mineração de dados.
+- Utilização de workflows para ciência de dados usando um Sistema Gerenciador de Banco de Dados (SGBD) como base.
+- Importância de séries temporais e regras de associação em um ambiente de inteligência de negócio.
+- Séries temporais: comparação de séries temporais (DTW, correlação cruzada), implementação, predição de valores numa série temporal (ARIMA), redução de dimensionalidade para séries temporais (piecewise aggregate approximation).
+- Detecção de anomalias.
+- Regras de associação: conceitos, medidas, algoritmo APRIORI, implementação em um SGBD.
