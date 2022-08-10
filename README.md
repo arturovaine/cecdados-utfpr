@@ -132,6 +132,14 @@
 - Banco de dados extensíveis: especificação de novos tipos abstratos de dados.
 
 ### Escrita de Artigo Científico
+- Conceitos fundamentais sobre a organização e escrita de artigo científico.
+- Estrutura de um artigo científico.
+- Tipos de artigos científicos: resumo, resumo expandido, artigo completo em conferência e artigo completo em periódico.
+- Classificação de eventos científicos e periódicos de acordo com o Qualis-CAPES, SNIP, JCR, entre outros.
+- Utilização de processadores e editores de texto na escrita de artigos (LaTeX e Word).
+- Escrita de seções de um artigo: resumo, introdução, métodos e metodologia, resultados.
+- Normas de escrita de artigos científicos em computação: IEEE, ACM, Springer, entre outros.
+- Ética na escrita e publicação de artigos: participação de autores, plágio e autoplágio.
 
 ### Métodos e Modelos Avançados em Ciência de Dados
 - Visão geral dos modelos e métodos avançados em ciência de dados.
