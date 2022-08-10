@@ -144,6 +144,14 @@
 
 ## Módulo 6
 ### Trabalho de Conclusão de Curso
+- Conceitos fundamentais sobre a organização e escrita de trabalho de conclusão de curso.
+- Estrutura de uma monografia a nível de pós-graduação.
+- Utilização de processadores e editores de texto na escrita de monografia (LaTeX e Word).
+- Escrita de seções de uma monografia: resumo, introdução, revisão sistemática da literatura, métodos e metodologia, resultados e conclusões.
+- Ética na escrita de monografia.
+- Desenvolvimento do trabalho proposto.
+- Técnicas para apresentação e defesa de monografia perante uma banca examinadora.
+- Normas da UTFPR para elaboração de trabalhos acadêmicos.
 
 ### Resolução de Problemas com Ciência de Dados
 - Utilização de métodos e modelos avançados na resolução de problemas: computação evolucionária (algoritmos genéticos e programação genética) e métodos Ensemble.
