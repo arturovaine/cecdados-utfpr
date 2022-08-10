@@ -1,4 +1,6 @@
-# Especialização em Ciência de Dados - UTFPR (Campus Dois Vizinhos -EaD)
+# Especialização em Ciência de Dados - UTFPR
+
+## Campus Dois Vizinhos -EaD
 
 ## Módulo 1
 - Ambiente de Ensino e Aprendizagem a Distância
